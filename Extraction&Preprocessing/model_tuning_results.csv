@@ -1,0 +1,9 @@
+Model,Accuracy,F1 Score,Precision,Recall,Best Params
+RandomForest,0.768361581920904,0.7540394405226885,0.7549288089252406,0.768361581920904,"{'n_estimators': 300, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20}"
+GradientBoosting,0.7740112994350282,0.7678841109533318,0.7660167021174009,0.7740112994350282,"{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'log2', 'max_depth': 5, 'learning_rate': 0.1}"
+LogisticRegression,0.768361581920904,0.7531276658422533,0.7499810777987659,0.768361581920904,"{'solver': 'lbfgs', 'penalty': 'l2', 'C': 1}"
+SVC,0.7536723163841808,0.7453489407264948,0.7466872152253295,0.7536723163841808,"{'kernel': 'linear', 'gamma': 'scale', 'C': 10}"
+DecisionTree,0.7005649717514124,0.7043163523699936,0.7090803042071612,0.7005649717514124,"{'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10}"
+AdaBoost,0.7480225988700565,0.742536299722332,0.7387720925963303,0.7480225988700565,"{'n_estimators': 200, 'learning_rate': 1.5}"
+KNN,0.6994350282485876,0.6841880147899133,0.6899983279208375,0.6994350282485876,"{'weights': 'distance', 'n_neighbors': 7, 'metric': 'manhattan'}"
+GaussianNB,0.6587570621468927,0.6416726705713643,0.6334497727250503,0.6587570621468927,{'var_smoothing': 1e-09}
