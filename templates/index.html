@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎓 Student Success Predictor</title>
+</head>
+<body>
+    <h2>🎓 Student Success Predictor</h2>
+    <form method="POST" action="/predict">
+        <label>Marital Status: <input name="Marital status" value="Single" required></label><br>
+        <label>Application Mode: <input type="number" name="Application mode" value="1" required></label><br>
+        <label>Application Order: <input type="number" name="Application order" value="1" required></label><br>
+        <label>Course: <input type="number" name="Course" value="33" required></label><br>
+        <label>Daytime/Evening Attendance: <input type="number" name="Daytime/evening attendance" value="1" required></label><br>
+        <label>Previous Qualification: <input type="number" name="Previous qualification" value="1" required></label><br>
+        <label>Previous Qualification Grade: <input type="number" name="Previous qualification (grade)" value="14.0"></label><br>
+        <label>Nacionality: <input type="number" name="Nacionality" value="1" required></label><br>
+        <label>Mother Qualification: <input type="number" name="Mother's qualification" value="1" required></label><br>
+        <label>Father Qualification: <input type="number" name="Father's qualification" value="1" required></label><br>
+        <label>Mother Occupation: <input type="number" name="Mother's occupation" value="1" required></label><br>
+        <label>Father Occupation: <input type="number" name="Father's occupation" value="1" required></label><br>
+        <label>Admission Grade: <input type="number" name="Admission grade" value="142.5" required></label><br>
+        <label>Displaced: <input type="number" name="Displaced" value="0" required></label><br>
+        <label>Educational Special Needs: <input type="number" name="Educational special needs" value="0" required></label><br>
+        <label>Debtor: <input type="number" name="Debtor" value="0" required></label><br>
+        <label>Tuition Fees Up to Date: <input type="number" name="Tuition fees up to date" value="1" required></label><br>
+        <label>Gender: <input name="Gender" value="F" required></label><br>
+        <label>Scholarship Holder: <input type="number" name="Scholarship holder" value="0" required></label><br>
+        <label>Age at Enrollment: <input type="number" name="Age at enrollment" value="20" required></label><br>
+        <label>International: <input type="number" name="International" value="0" required></label><br>
+        <label>1st Sem Units Enrolled: <input type="number" name="Curricular units 1st sem (enrolled)" value="6" required></label><br>
+        <label>1st Sem Evaluations: <input type="number" name="Curricular units 1st sem (evaluations)" value="6" required></label><br>
+        <label>1st Sem Approved: <input type="number" name="Curricular units 1st sem (approved)" value="6" required></label><br>
+        <label>1st Sem Grade: <input type="number" name="Curricular units 1st sem (grade)" value="13" required></label><br>
+        <label>1st Sem Without Evaluations: <input type="number" name="Curricular units 1st sem (without evaluations)" value="0" required></label><br>
+        <label>1st Sem Credited: <input type="number" name="Curricular units 1st sem (credited)" value="6" required></label><br>
+        <label>2nd Sem Units Enrolled: <input type="number" name="Curricular units 2nd sem (enrolled)" value="6" required></label><br>
+        <label>2nd Sem Evaluations: <input type="number" name="Curricular units 2nd sem (evaluations)" value="6" required></label><br>
+        <label>2nd Sem Approved: <input type="number" name="Curricular units 2nd sem (approved)" value="6" required></label><br>
+        <label>2nd Sem Grade: <input type="number" name="Curricular units 2nd sem (grade)" value="14" required></label><br>
+        <label>2nd Sem Without Evaluations: <input type="number" name="Curricular units 2nd sem (without evaluations)" value="0" required></label><br>
+        <label>2nd Sem Credited: <input type="number" name="Curricular units 2nd sem (credited)" value="6" required></label><br>
+        <label>Unemployment Rate: <input type="number" step="0.1" name="Unemployment rate" value="10.0" required></label><br>
+        <label>Inflation Rate: <input type="number" step="0.1" name="Inflation rate" value="1.5" required></label><br>
+        <label>GDP: <input type="number" step="0.1" name="GDP" value="2.1" required></label><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction }}</h3>
+</body>
+</html>
