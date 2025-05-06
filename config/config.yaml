@@ -1,0 +1,22 @@
+# config/config.yaml
+
+model_paths:
+  best_model: "models/best_model.joblib"
+  preprocessor: "models/preprocessor.joblib"
+  label_encoder: "models/label_encoder.joblib"
+
+training:
+  test_size: 0.2
+  random_state: 42
+  scoring: "f1_weighted"
+  cv_folds: 5
+  n_iter: 10
+
+data:
+  path: "data/data.csv"
+  target_column: "Target"
+
+outputs:
+  confusion_matrix: "outputs/confusion_matrix.png"
+  feature_importance: "outputs/feature_importance.png"
+  model_comparison: "outputs/model_comparison.png"

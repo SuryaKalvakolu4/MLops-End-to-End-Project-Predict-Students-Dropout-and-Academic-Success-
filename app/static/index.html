@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Success Predictor</title>
+</head>
+<body>
+    <h2>🎓 Student Success Predictor</h2>
+    <form id="prediction-form">
+        <label>Marital Status: <input type="text" name="Marital_status" value="Single" required></label><br>
+        <label>Application Mode: <input type="number" name="Application_mode" value="1" required></label><br>
+        <!-- [trimmed: same fields as yours] -->
+        <label>GDP: <input type="number" step="0.1" name="GDP" value="2.1" required></label><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script>
+        document.getElementById("prediction-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const payload = {};
+            formData.forEach((value, key) => {
+                payload[key] = isNaN(value) ? value : parseFloat(value);
+            });
+            console.log("📤 Payload being sent:", payload);
+
+            try {
+                const response = await fetch("http://127.0.0.1:8000/predict", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                console.log("✅ Result received:", result);
+                document.getElementById("result").innerText = `Predicted Status: ${result.prediction}`;
+            } catch (error) {
+                console.error("❌ Error during prediction:", error);
+                document.getElementById("result").innerText = "Error occurred during prediction.";
+            }
+        });
+    </script>
+</body>
+</html>
